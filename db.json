@@ -1,0 +1,90 @@
+{
+  "todo": [
+    {
+      "userid": 1,
+      "title": "tarea test 1",
+      "description": "esto es un test",
+      "date": "29-10-2022",
+      "state": "done",
+      "done_date": "29-10-2022",
+      "serv_date": "2022-10-29T22:03:15.145Z",
+      "id": 1
+    },
+    {
+      "userid": 1,
+      "title": "tarea test 2",
+      "description": "tarea test 2",
+      "date": "29-10-2022",
+      "state": "todo",
+      "done_date": "29-10-2022",
+      "serv_date": "2022-10-29T22:03:47.244Z",
+      "id": 2
+    },
+    {
+      "userid": 1,
+      "title": "tarea test 3",
+      "description": "esto es una tarea test 3",
+      "date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
+      "serv_date": "2022-10-29T22:55:09.860Z",
+      "id": 3
+    },
+    {
+      "userid": 1,
+      "title": "tarea test 4",
+      "description": "este es una tarea test 4",
+      "date": "29-10-2022",
+      "state": "done",
+      "done_date": "29-10-2022",
+      "serv_date": "2022-10-29T22:55:36.132Z",
+      "id": 4
+    },
+    {
+      "userid": 1,
+      "title": "tarea test 5",
+      "description": "Esto es una tarea test 5",
+      "date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
+      "serv_date": "2022-10-29T22:55:52.975Z",
+      "id": 5
+    },
+    {
+      "userid": 2,
+      "title": "Tarea test 1",
+      "description": "Esto es un test",
+      "date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
+      "serv_date": "2022-10-29T22:59:51.965Z",
+      "id": 6
+    },
+    {
+      "userid": 2,
+      "title": "Tarea test 2",
+      "description": "Esto es un test para agregar tareas 2\n",
+      "date": "29-10-2022",
+      "state": "done",
+      "done_date": "29-10-2022",
+      "serv_date": "2022-10-29T23:00:10.046Z",
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Yo",
+      "lastname": "Soy",
+      "username": "admin",
+      "pass": "admin"
+    },
+    {
+      "firstname": "Fernando",
+      "lastname": "Diaz",
+      "pass": "fdiaz",
+      "username": "fdiaz",
+      "id": 2
+    }
+  ]
+}

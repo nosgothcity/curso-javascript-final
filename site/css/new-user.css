@@ -1,0 +1,13 @@
+.container {
+    max-width: 960px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.back-to-index {
+    margin-top: 20px;
+}
+
+.alert.alert-danger {
+    margin-top: 5px;
+}

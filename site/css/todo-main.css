@@ -1,0 +1,26 @@
+.container {
+    max-width: 960px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.new-todo {
+    margin-top: 40px;
+}
+
+.button-add {
+    color: #FFFFFF;
+    background-color: #624296;
+}
+
+.button-add:focus {
+    color: #FFFFFF;
+}
+
+.d-block.text-muted {
+    margin-bottom: 2px;
+}
+
+.done{
+    background-color: #daf7df;
+}
