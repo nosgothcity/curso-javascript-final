@@ -5,6 +5,16 @@ let userName
 let userPass
 let showErrorMessageAlias
 
+class User {
+    constructor (newUserFirstname, newUserLastname, newUsername, newUserPass) {
+        this.firstname = newUserFirstname
+        this.lastname = newUserLastname
+        this.username = newUsername
+        this.pass = newUserPass
+        this.date = new Date()
+    }
+}
+
 const initElements = () => {
     createUser = document.getElementById("new-user-form")
     userFirstName = document.getElementById("firstName")
@@ -31,6 +41,7 @@ const createNewUser = async event => {
     let newUsername = userName.value.toLowerCase()
     let newUserPass = userPass.value
     // console.log(newUsername)
+    const newUser = new User(newUserFirstname, newUserLastname, newUsername, newUserPass)
 
     try{
         response = await fetch(`http://localhost:3000/users?username=${newUsername}`, {
@@ -45,10 +56,11 @@ const createNewUser = async event => {
         showErrorMessageAlias.hidden = false
     } else {
         raw = JSON.stringify({
-            "firstname": newUserFirstname,
-            "lastname": newUserLastname,
-            "pass": newUserPass,
-            "username": newUsername
+            "firstname": newUser.firstname,
+            "lastname": newUser.lastname,
+            "pass": newUser.pass,
+            "username": newUser.username,
+            "create_date": newUser.date,
         })
         await createUserApi(raw)
             .then(response => {

@@ -8,6 +8,9 @@ let todoForm
 let logout
 let todoTitle
 let todoDescription
+let infoTodo
+let doneToday
+let allTodo = [];
 
 const trashIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
@@ -27,7 +30,9 @@ const calendarIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height=
 </svg>`
 
 const initElements = () => {
-    logout = document.getElementById('logout')
+    doneToday = document.getElementById("done-today")
+    infoTodo = document.getElementById("total-todo-done")
+    logout = document.getElementById("logout")
     todoTitle = document.getElementById("title")
     todoDescription = document.getElementById("description")
     showUser = document.getElementById("show-user")
@@ -54,6 +59,20 @@ const initViews = () => {
 const logoutUser = () => {
     sessionStorage.removeItem('userId')
     window.location.href = '../index.html'
+}
+
+const statusTodo = async () => {
+    let date = new Date()
+    let day = date.getDate()
+    let month = date.getMonth() + 1
+    let year = date.getFullYear()
+    let today = `${day}-${month}-${year}`
+
+    let todoStatusDone = allTodo.filter(todo => todo.state === 'done')
+    let checkDoneToday = allTodo.filter(todo => todo.done_date === today)
+
+    infoTodo.innerHTML = `Tienes <strong>${todoStatusDone.length} tarea(s)</strong> completada(s) de un total de <strong>${allTodo.length} tarea(s).</strong>`
+    doneToday.innerHTML = `Hoy se han terminado <strong>${checkDoneToday.length} tarea(s).</strong>`
 }
 
 const newTodoData = async event => {
@@ -177,10 +196,16 @@ const getUserInfo = async userId => {
     return userData
 }
 
-const createTodoList = todoListByUser => {
+const createTodoList = async todoListByUser => {
     todoListContainer.innerHTML = ""
+
+    if(allTodo.length > 0){
+        allTodo.splice(0, allTodo.length)
+    }
+
     for (const todoElement of todoListByUser) {
         // console.log("todoElement", todoElement)
+        allTodo.push(todoElement)
         let isDone = ''
         let colorDone = 'todo'
         let actionButtons = `<div class="d-flex ms-auto">
@@ -223,6 +248,7 @@ const createTodoList = todoListByUser => {
             deleteButton.onclick = () => deleteTodoElement(todoElement.id)    
         }
     }
+    await statusTodo()
 }
 
 const deleteTodoElement = todoId => {

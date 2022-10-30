@@ -5,8 +5,8 @@
       "title": "tarea test 1",
       "description": "esto es un test",
       "date": "29-10-2022",
-      "state": "done",
-      "done_date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
       "serv_date": "2022-10-29T22:03:15.145Z",
       "id": 1
     },
@@ -16,7 +16,7 @@
       "description": "tarea test 2",
       "date": "29-10-2022",
       "state": "todo",
-      "done_date": "29-10-2022",
+      "done_date": "",
       "serv_date": "2022-10-29T22:03:47.244Z",
       "id": 2
     },
@@ -35,8 +35,8 @@
       "title": "tarea test 4",
       "description": "este es una tarea test 4",
       "date": "29-10-2022",
-      "state": "done",
-      "done_date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
       "serv_date": "2022-10-29T22:55:36.132Z",
       "id": 4
     },
@@ -65,10 +65,70 @@
       "title": "Tarea test 2",
       "description": "Esto es un test para agregar tareas 2\n",
       "date": "29-10-2022",
-      "state": "done",
-      "done_date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
       "serv_date": "2022-10-29T23:00:10.046Z",
       "id": 7
+    },
+    {
+      "userid": 1,
+      "title": "tarea test 6",
+      "description": "Esto es un test 6",
+      "date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
+      "serv_date": "2022-10-29T23:44:41.339Z",
+      "id": 8
+    },
+    {
+      "userid": 1,
+      "title": "tarea test 7",
+      "description": "tarea test 7",
+      "date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
+      "serv_date": "2022-10-29T23:45:59.287Z",
+      "id": 9
+    },
+    {
+      "userid": 1,
+      "title": "tarea test 8 ",
+      "description": "Esto es una tarea test 8\n",
+      "date": "27-10-2022",
+      "state": "done",
+      "done_date": "28-10-2022",
+      "serv_date": "2022-10-29T23:50:32.727Z",
+      "id": 10
+    },
+    {
+      "userid": 1,
+      "title": "Tarea test 9",
+      "description": "Esto es una tarea test 8\n",
+      "date": "29-10-2022",
+      "state": "done",
+      "done_date": "29-10-2022",
+      "serv_date": "2022-10-29T23:53:05.324Z",
+      "id": 11
+    },
+    {
+      "userid": 1,
+      "title": "Tarea test 10",
+      "description": "Esto es una Tarea test 9\nTest",
+      "date": "29-10-2022",
+      "state": "done",
+      "done_date": "29-10-2022",
+      "serv_date": "2022-10-29T23:54:11.207Z",
+      "id": 12
+    },
+    {
+      "userid": 3,
+      "title": "Test 1",
+      "description": "Esto es un test 1",
+      "date": "29-10-2022",
+      "state": "todo",
+      "done_date": "",
+      "serv_date": "2022-10-30T00:12:21.036Z",
+      "id": 13
     }
   ],
   "users": [
@@ -77,14 +137,24 @@
       "firstname": "Yo",
       "lastname": "Soy",
       "username": "admin",
-      "pass": "admin"
+      "pass": "admin",
+      "create_date": "29-10-2022"
     },
     {
       "firstname": "Fernando",
       "lastname": "Diaz",
       "pass": "fdiaz",
       "username": "fdiaz",
+      "create_date": "29-10-2022",
       "id": 2
+    },
+    {
+      "firstname": "Sebastian",
+      "lastname": "Crichton",
+      "pass": "scrichton",
+      "username": "scrichton",
+      "create_date": "2022-10-30T00:09:05.687Z",
+      "id": 3
     }
   ]
 }
